@@ -1,6 +1,6 @@
 # PRIMA
 
-**PRIMA** (**PR**otist **I**ntegrated **M**itogenome **A**nnotation) is a lightweight Python pipeline for the annotation of protist mitochondrial genomes. The pipeline requires a previously assembled mitochondrial genome FASTA file. This sequence must be first submitted to the GeneMarkS and MFannot web servers to generate the input files required by PRIMA. The aim of this pipeline is to quickly overcome the problems tied to file formats between the two web tools generating a GENBANK file for the visualization of the mitogenome annotation with the OGDRAW web tool.
+**PRIMA** (**PR**otist **I**ntegrated **M**itogenome **A**nnotation) is a lightweight Python pipeline for the annotation of protist mitochondrial genomes. The pipeline requires a previously assembled mitochondrial genome FASTA file. This sequence must be first submitted to the GeneMarkS and MFannot web servers to generate the input files required by PRIMA. The aim of this pipeline is to quickly overcome the problems tied to file formats between the two web tools while generating a valid GENBANK file for the visualization of the mitogenome annotation via the OGDRAW web tool.
 
 PRIMA integrates:
 
