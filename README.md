@@ -161,7 +161,7 @@ Produces a GenBank file containing only protein-coding genes.
 ### MFannot mode
 
 ```bash
-python3 mitoannotate.py mfannot \
+python3 prima.py mfannot \
     --prefix SAMPLE
 ```
 
@@ -182,8 +182,8 @@ Produces a GenBank file containing protein-coding genes ad rRNAs and tRNAs
 
 Results are written to:
 
-```text
-results/
+```bash
+/results
 ```
 
 and include:
