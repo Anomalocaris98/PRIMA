@@ -71,12 +71,20 @@ def main():
                 base_dict=seq_dict
             )
         )
+    print("\nDEBUG\n")
+    for rec in records:
+        print(
+            f"[DEBUG] {rec.id} length={len(rec.seq)}"
+        )
 
     print(f"[INFO] Parsed records : {len(records)}")
 
     total_features = 0
 
     for rec in records:
+        
+        # GenBank LOCUS names cannot contain spaces
+        # Keep only the accession-like first token
 
         rec.annotations["molecule_type"] = "DNA"
 

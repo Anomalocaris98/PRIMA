@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+
+# Pipeline outputs
+results/
+test_*/
+
+# Generated annotation files
+*.gb
+
+# Logs
+*.log

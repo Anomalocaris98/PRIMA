@@ -1,0 +1,290 @@
+>Feature C_0 Table1
+1083	1406	gene
+			gene	nad9
+1083	1406	CDS
+			product	NADH dehydrogenase subunit 9
+			protein_id	lcl| G-nad9
+			EC_number	1.6.5.3
+1430	1771	gene
+			gene	orf113
+			note	copy 1
+1430	1771	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf113_1
+1810	2145	gene
+			gene	nad3
+1810	2145	CDS
+			product	NADH dehydrogenase subunit 3
+			protein_id	lcl| G-nad3
+			EC_number	1.6.5.3
+2165	2734	gene
+			gene	orf189
+2165	2734	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf189
+			note	no
+2910	3530	gene
+			gene	ccmF
+2910	3530	CDS
+			product	haem lyase
+			protein_id	lcl| G-ccmF
+3572	3946	gene
+			gene	orf124
+			note	copy 1
+3572	3946	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf124_1
+			note	first
+4172	4585	gene
+			gene	rpl16
+4172	4585	CDS
+			product	ribosomal protein L16
+			protein_id	lcl| G-rpl16
+4668	4997	gene
+			gene	rps10
+4668	4997	CDS
+			product	ribosomal protein S10
+			protein_id	lcl| G-rps10
+5723	6343	gene
+			gene	orf206
+5723	6343	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf206
+			note	first
+6364	6435	gene
+			gene	trnF(gaa)
+6364	6435	tRNA
+			product	transfer RNA Phenylalanine
+			protein_id	lcl| G-trnF
+			anticodon	(pos:6396..6398,aa:f)
+7375	8319	gene
+			gene	orf314
+7375	8319	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf314
+			note	first
+8333	8557	gene
+			gene	atp9
+8333	8557	CDS
+			product	ATP synthase F0 subunit c
+			protein_id	lcl| G-atp9
+			EC_number	3.6.3.14
+8608	9114	gene
+			gene	orf168
+8608	9114	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf168
+			note	first
+9529	10386	gene
+			gene	orf285
+9529	10386	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf285
+10438	11142	gene
+			gene	orf234
+10438	11142	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf234
+			note	first
+11545	11144	gene
+			gene	rpl6
+11545	11144	CDS
+			product	ribosomal protein L6
+			protein_id	lcl| G-rpl6
+12176	11895	gene
+			gene	rps14
+12176	11895	CDS
+			product	ribosomal protein S14
+			protein_id	lcl| G-rps14
+13460	12204	gene
+			gene	nad7
+13460	12204	CDS
+			product	NADH dehydrogenase subunit 7
+			protein_id	lcl| G-nad7
+			EC_number	1.6.5.3
+13481	13993	gene
+			gene	orf170
+13481	13993	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf170
+			note	first
+14034	14453	gene
+			gene	rps12
+14034	14453	CDS
+			product	ribosomal protein S12
+			protein_id	lcl| G-rps12
+14450	14920	gene
+			gene	nad10
+14450	14920	CDS
+			product	NADH dehydrogenase subunit 10
+			protein_id	lcl| G-nad10
+			EC_number	1.6.5.3
+14922	15458	gene
+			gene	orf178
+14922	15458	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf178
+			note	no
+15480	16250	gene
+			gene	rpl2
+15480	16250	CDS
+			product	ribosomal protein L2
+			protein_id	lcl| G-rpl2
+16280	16546	gene
+			gene	rps19
+16280	16546	CDS
+			product	ribosomal protein S19
+			protein_id	lcl| G-rps19
+16559	17038	gene
+			gene	orf159
+16559	17038	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf159
+			note	no
+17284	17793	gene
+			gene	rps13
+17284	17793	CDS
+			product	ribosomal protein S13
+			protein_id	lcl| G-rps13
+17806	18744	gene
+			gene	orf312
+17806	18744	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf312
+			note	first
+18702	19076	gene
+			gene	orf124
+			note	copy 2
+18702	19076	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf124_2
+			note	no
+19386	20552	gene
+			gene	cob
+19386	20552	CDS
+			product	apocytochrome b
+			protein_id	lcl| G-cob
+			EC_number	1.10.2.2
+20942	22723	gene
+			gene	nad5
+20942	22723	CDS
+			product	NADH dehydrogenase subunit 5
+			protein_id	lcl| G-nad5
+			EC_number	1.6.5.3
+22704	24479	gene
+			gene	cox2
+22704	24479	CDS
+			product	cytochrome c oxidase subunit 2
+			protein_id	lcl| G-cox2
+			EC_number	1.9.3.1
+24766	25107	gene
+			gene	orf113
+			note	copy 2
+24766	25107	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf113_2
+			note	no
+24528	26144	gene
+			gene	rns
+24528	26144	rRNA
+			product	small subunit ribosomal RNA
+			protein_id	lcl| G-rns
+25892	26419	gene
+			gene	orf175
+25892	26419	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf175
+			note	first
+26438	27235	gene
+			gene	orf265
+			note	copy 1
+26438	27235	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf265_1
+27533	27603	gene
+			gene	trnW(tca)
+27533	27603	tRNA
+			product	transfer RNA Tryptophan
+			protein_id	lcl| G-trnW
+			anticodon	(pos:27565..27567,aa:w)
+27613	28794	gene
+			gene	orf393
+27613	28794	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf393
+			note	first
+29204	29748	gene
+			gene	cox1
+29204	29748	CDS
+			product	cytochrome c oxidase subunit 1
+			protein_id	lcl| G-cox1
+			EC_number	1.9.3.1
+29375	30380	gene
+			gene	nad1
+29375	30380	CDS
+			product	NADH dehydrogenase subunit 1
+			protein_id	lcl| G-nad1
+			EC_number	1.6.5.3
+31653	32435	gene
+			gene	ndhA
+31653	32435	CDS
+			product	NADH-plastoquinone oxidoreductase subunit 1
+			protein_id	lcl| G-ndhA
+			EC_number	1.6.5.3
+32461	33258	gene
+			gene	orf265
+			note	copy 2
+32461	33258	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf265_2
+			note	first
+33277	33636	gene
+			gene	rpl14
+33277	33636	CDS
+			product	ribosomal protein L14
+			protein_id	lcl| G-rpl14
+34070	35494	gene
+			gene	nad4
+34070	35494	CDS
+			product	NADH dehydrogenase subunit 4
+			protein_id	lcl| G-nad4
+			EC_number	1.6.5.3
+35572	35874	gene
+			gene	orf100
+35572	35874	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf100
+35878	36459	gene
+			gene	orf193
+35878	36459	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf193
+			note	first
+36505	37170	gene
+			gene	orf221
+36505	37170	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf221
+37484	37167	gene
+			gene	orf105
+37484	37167	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf105
+			note	no
+37154	39838	gene
+			gene	rnl
+37154	39838	rRNA
+			product	large subunit ribosomal RNA
+			protein_id	lcl| G-rnl
+39846	39926	gene
+			gene	trnY(gta)
+39846	39926	tRNA
+			product	transfer RNA Tyrosine
+			protein_id	lcl| G-trnY
+			anticodon	(pos:39879..39881,aa:y)
+39936	40469	gene
+			gene	orf177
+39936	40469	CDS
+			product	hypothetical protein
+			protein_id	lcl| G-orf177
+			note	first

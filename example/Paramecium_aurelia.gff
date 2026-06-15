@@ -1,0 +1,59 @@
+##gff-version 2
+##source-version GeneMark.hmm_PROKARYOTIC 3.42
+##date: Mon Jun 15 11:28:30 2026
+# Sequence file name: seq.fna
+# Model file name: GeneMark_hmm_heuristic.mod
+# RBS: false
+# Model information: Heuristic_model_for_genetic_code_4_and_GC_41
+
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	2	175	7.064404	+	0	gene_id=1
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	1083	1337	20.896293	-	0	gene_id=2
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	1514	1798	15.992807	-	0	gene_id=3
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	2030	2353	15.345385	-	0	gene_id=4
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	2459	2815	19.901830	-	0	gene_id=5
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	3027	3446	31.494775	-	0	gene_id=6
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	3593	3946	3.273362	+	0	gene_id=7
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	4271	4543	14.574013	-	0	gene_id=8
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	4656	4997	10.755431	+	0	gene_id=9
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	5033	5164	7.655175	-	0	gene_id=10
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	5257	5847	11.877103	+	0	gene_id=11
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	6340	6669	13.003325	-	0	gene_id=12
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	7429	8319	29.291382	+	0	gene_id=13
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	8330	8557	8.230222	+	0	gene_id=14
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	8689	8865	11.816992	-	0	gene_id=15
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	9529	10386	39.309372	+	0	gene_id=16
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	10477	11142	16.241608	+	0	gene_id=17
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	11144	11689	17.085515	-	0	gene_id=18
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	11682	11894	6.067948	-	0	gene_id=19
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	11895	12203	6.358176	-	0	gene_id=20
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	12204	13472	25.866344	-	0	gene_id=21
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	13493	13993	12.009285	+	0	gene_id=22
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	14046	14453	6.268475	+	0	gene_id=23
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	14561	14920	9.467755	+	0	gene_id=24
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	14901	15458	10.683145	+	0	gene_id=25
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	15612	16250	8.769709	+	0	gene_id=26
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	16559	17038	20.316879	+	0	gene_id=27
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	17059	17793	16.335442	+	0	gene_id=28
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	17806	18744	46.428269	+	0	gene_id=29
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	19299	20552	9.454652	+	0	gene_id=30
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	21319	21552	10.119647	-	0	gene_id=31
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	21622	21822	6.881298	-	0	gene_id=32
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	21821	22723	5.492357	+	0	gene_id=33
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	22949	23059	3.532958	-	0	gene_id=34
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	23058	24479	25.649080	+	0	gene_id=35
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	25892	26419	10.220866	+	0	gene_id=36
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	26438	27235	11.616427	+	0	gene_id=37
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	27558	27818	7.525553	-	0	gene_id=38
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	28012	28221	12.541341	-	0	gene_id=39
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	29030	31270	27.655157	+	0	gene_id=40
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	31605	32435	11.980191	+	0	gene_id=41
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	32877	33122	12.991263	-	0	gene_id=42
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	33100	33258	11.458776	+	0	gene_id=43
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	33277	33636	6.268639	+	0	gene_id=44
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	33910	34068	5.892987	-	0	gene_id=45
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	34070	35494	25.951470	+	0	gene_id=46
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	35572	35874	10.855964	+	0	gene_id=47
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	35965	36459	8.792229	+	0	gene_id=48
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	36697	37170	7.308531	+	0	gene_id=49
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	37923	38057	4.912919	-	0	gene_id=50
+NC_001324.2 Paramecium aurelia mitochondrial complete genome	GeneMark.hmm	CDS	39929	40153	10.320782	-	0	gene_id=51

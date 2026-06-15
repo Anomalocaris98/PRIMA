@@ -122,7 +122,7 @@ def main():
                     current_gene = gene
 
                     out.write(
-                        f"{seqid}\tMFannot\tgene\t"
+                        f"C_0\tMFannot\tgene\t"
                         f"{start}\t{end}\t.\t"
                         f"{strand}\t.\t"
                         f"ID={gene};Name={gene}\n"
@@ -141,7 +141,7 @@ def main():
                     )
 
                     out.write(
-                        f"{seqid}\tMFannot\t{feature_type}\t"
+                        f"C_0\tMFannot\t{feature_type}\t"
                         f"{start}\t{end}\t.\t"
                         f"{strand}\t.\t"
                         f"ID={current_gene}_{feature_type};"

@@ -18,6 +18,15 @@ Example:
         sample.faa \
         mito_db \
         sample_blastp_mito_hits.tsv
+
+Custom parameters:
+
+    python blastp_mito_hits.py \
+        sample.faa \
+        mito_db \
+        sample_blastp_mito_hits.tsv \
+        --evalue 1e-5 \
+        --threads 8
 """
 
 import argparse
@@ -60,8 +69,9 @@ def main():
 
     parser.add_argument(
         "--evalue",
-        default="1e-10",
-        help="BLAST e-value threshold (default: 1e-10)"
+        type=float,
+        default=1e-10,
+        help="BLAST E-value cutoff (default: 1e-10)"
     )
 
     args = parser.parse_args()
@@ -72,8 +82,10 @@ def main():
         )
 
     print("[INFO] Running BLASTP")
-    print(f"[INFO] Query   : {args.query}")
-    print(f"[INFO] Database: {args.db}")
+    print(f"[INFO] Query    : {args.query}")
+    print(f"[INFO] Database : {args.db}")
+    print(f"[INFO] E-value  : {args.evalue}")
+    print(f"[INFO] Threads  : {args.threads}")
 
     with tempfile.NamedTemporaryFile(mode="w+") as tmp:
 

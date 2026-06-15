@@ -17,7 +17,7 @@ Output:
     output.gff3
 
 Example:
-    python gff2_to_gff3.py \
+    python3 gff2_to_gff3.py \
         sample_named.gff \
         sample_named.gff3
 """
@@ -46,7 +46,9 @@ def main():
     args = parser.parse_args()
 
     if not Path(args.input).exists():
-        raise FileNotFoundError(args.input)
+        raise FileNotFoundError(
+            f"Input file not found: {args.input}"
+        )
 
     print(f"[INFO] Reading: {args.input}")
 
@@ -68,11 +70,13 @@ def main():
                 if line.startswith("#"):
                     continue
 
-                cols = re.split(
-                    r"\s+",
-                    line,
-                    maxsplit=8
-                )
+                #
+                # Robust parsing:
+                # recover the last 8 GFF fields and keep
+                # everything before them as seqid
+                #
+
+                cols = line.rsplit(None, 8)
 
                 if len(cols) != 9:
                     continue
@@ -89,6 +93,27 @@ def main():
                     attrs
                 ) = cols
 
+                #
+                # GeneMark output should contain CDSs
+                #
+
+                if feature != "CDS":
+                    continue
+
+                #
+                # Ensure coordinates are valid
+                #
+
+                try:
+                    int(start)
+                    int(end)
+                except ValueError:
+                    continue
+
+                #
+                # Extract GeneMark gene ID
+                #
+
                 m = re.search(
                     r"gene_id=(\d+)",
                     attrs
@@ -98,6 +123,11 @@ def main():
                     continue
 
                 gid = m.group(1)
+
+                #
+                # Extract annotation added by
+                # add_gene_names.py
+                #
 
                 g = re.search(
                     r"gene=([^;]+)",
@@ -109,15 +139,23 @@ def main():
                 else:
                     gene_name = f"gene_{gid}"
 
+                #
+                # Gene feature
+                #
+
                 out.write(
-                    f"{seqid}\t{source}\tgene\t"
+                    f"C_0\t{source}\tgene\t"
                     f"{start}\t{end}\t.\t"
                     f"{strand}\t.\t"
                     f"ID={gene_name};Name={gene_name}\n"
                 )
 
+                #
+                # CDS feature
+                #
+
                 out.write(
-                    f"{seqid}\t{source}\tCDS\t"
+                    f"C_0\t{source}\tCDS\t"
                     f"{start}\t{end}\t"
                     f"{score}\t{strand}\t{phase}\t"
                     f"ID={gene_name}_CDS;"

@@ -1,9 +1,20 @@
 #!/usr/bin/env python3
 
 """
-mitoannotate.py
+prima.py
 
-Master pipeline for mitochondrial genome annotation.
+Master pipeline for protist mitochondrial genome annotation
+
+INPUT FILES
+=========
+The pipeline automatically looks for:
+
+    PREFIX.faa #genemarkS proteins FASTA
+    PREFIX.gff #genemarkS gff2 output file
+    PREFIX.tbl #MFAnnot output file
+    PREFIX.fsa #assembled mitogenome FASTA
+
+in the current working directory.
 
 WORKFLOWS
 =========
@@ -25,7 +36,7 @@ Steps:
 
 Output:
 
-    PREFIX/
+    results/
         PREFIX.gb
 
 
@@ -45,7 +56,7 @@ Steps:
 
 Output:
 
-    PREFIX/
+    results/
         PREFIX.gb
 
 
@@ -67,40 +78,64 @@ Steps:
 
 Output:
 
-    PREFIX/
+    results/
         PREFIX.gb
 
+BLAST PARAMETERS
+================
+
+The GeneMark and Full workflows allow the user
+to customize BLASTP settings.
+
+Available options:
+
+    --evalue FLOAT
+        BLASTP E-value cutoff
+        (default: 1e-10)
+
+    --threads INT
+        Number of CPU threads
+        (default: 8)
+
+Examples:
+
+    python3 mitoannotate.py genemark \
+        --prefix sample \
+        --db paramecium_mito_db \
+        --evalue 1e-10 \
+        --threads 8
+
+    python3 mitoannotate.py full \
+        --prefix sample \
+        --db paramecium_mito_db \
+        --evalue 1e-10 \
+        --threads 8
 
 EXAMPLES
 ========
 
 GeneMark only:
 
-    python mitoannotate.py genemark \
-        --faa sample.faa \
-        --gff sample.gff \
-        --fasta sample.fsa \
+    python3 mitoannotate.py genemark \
+        --prefix sample \
         --db paramecium_mito_db \
-        --prefix sample
+        --evalue 1e-10 \
+        --threads 32
 
 
 MFannot only:
 
-    python mitoannotate.py mfannot \
-        --tbl sample.tbl \
-        --fasta sample.fsa \
-        --prefix sample
+    python3 mitoannotate.py mfannot \
+    --prefix sample
 
 
 Full workflow:
 
-    python mitoannotate.py full \
-        --faa sample.faa \
-        --gff sample.gff \
-        --tbl sample.tbl \
-        --fasta sample.fsa \
+    python3 mitoannotate.py full \
+        --prefix sample \
         --db paramecium_mito_db \
-        --prefix sample
+        --evalue 1e-10 \
+        --threads 32
 
 
 RESULTS
@@ -108,7 +143,7 @@ RESULTS
 
 All intermediate files are saved inside:
 
-    PREFIX/
+    results/
 
 allowing manual inspection and curation
 at every step of the workflow.
@@ -125,6 +160,11 @@ SCRIPT_DIR = (
     "scripts"
 )
 
+if not SCRIPT_DIR.exists():
+
+    raise FileNotFoundError(
+        f"Scripts directory not found: {SCRIPT_DIR}"
+    )
 
 def run(cmd):
 
@@ -161,9 +201,11 @@ def genemark_branch(args, results):
         script("blastp_mito_hits.py"),
         args.faa,
         args.db,
-        str(blast_hits)
+        str(blast_hits),
+        "--evalue", str(args.evalue),
+        "--threads", str(args.threads)
     ])
-
+    
     run([
         sys.executable,
         script("add_gene_names.py"),
@@ -221,26 +263,6 @@ def main():
     )
 
     parser.add_argument(
-        "--faa",
-        help="GeneMark protein FASTA (.faa)"
-    )
-
-    parser.add_argument(
-        "--gff",
-        help="GeneMark GFF file"
-    )
-
-    parser.add_argument(
-        "--tbl",
-        help="MFannot .tbl file"
-    )
-
-    parser.add_argument(
-        "--fasta",
-        help="Genome FASTA file"
-    )
-
-    parser.add_argument(
         "--db",
         help="BLAST database prefix"
     )
@@ -248,67 +270,72 @@ def main():
     parser.add_argument(
         "--prefix",
         required=True,
-        help="Output prefix"
+        help=(
+            "Sample prefix. The pipeline expects "
+            "PREFIX.faa, PREFIX.gff, PREFIX.tbl and PREFIX.fsa"
+        )   
+    )
+    
+    parser.add_argument(
+        "--evalue",
+        type=float,
+        default=1e-10,
+        help="BLASTP E-value cutoff"
+    )
+
+    parser.add_argument(
+        "--threads",
+        type=int,
+        default=8,
+        help="Number of CPU threads"
     )
 
     args = parser.parse_args()
 
     #
+    # Resolve input files from prefix
+    #
+
+    args.faa = f"{args.prefix}.faa"
+    args.gff = f"{args.prefix}.gff"
+    args.tbl = f"{args.prefix}.tbl"
+    args.fasta = f"{args.prefix}.fsa"
+
+    #
     # Validate inputs
     #
 
-    if args.mode == "genemark":
+    if args.mode in ("genemark", "full"):
 
-        required = [
-            args.faa,
-            args.gff,
-            args.fasta,
-            args.db
-        ]
-
-        if any(x is None for x in required):
+        if args.db is None:
 
             parser.error(
-                "genemark mode requires "
-                "--faa --gff --fasta --db"
+                "--db is required for GeneMark workflows"
             )
 
-    elif args.mode == "mfannot":
+        for f in (args.faa, args.gff, args.fasta):
 
-        required = [
-            args.tbl,
-            args.fasta
-        ]
+            if not Path(f).exists():
 
-        if any(x is None for x in required):
+                parser.error(
+                    f"Missing required file: {f}"
+                )
 
-            parser.error(
-                "mfannot mode requires "
-                "--tbl --fasta"
-            )
+    if args.mode in ("mfannot", "full"):
 
-    elif args.mode == "full":
+        for f in (args.tbl, args.fasta):
 
-        required = [
-            args.faa,
-            args.gff,
-            args.tbl,
-            args.fasta,
-            args.db
-        ]
+            if not Path(f).exists():
 
-        if any(x is None for x in required):
-
-            parser.error(
-                "full mode requires "
-                "--faa --gff --tbl --fasta --db"
-            )
+                parser.error(
+                    f"Missing required file: {f}"
+                )
 
     #
     # Results directory
     #
 
-    results = Path(args.prefix)
+    results = Path.cwd() / "results"
 
     results.mkdir(
         exist_ok=True
@@ -317,9 +344,23 @@ def main():
     print()
     print(f"[INFO] Results directory: {results}")
     print()
+    
+    normalized_fasta = (
+        results /
+        f"{args.prefix}_normalized.fsa"
+    )
+
+    run([
+        sys.executable,
+        script("normalize_fasta.py"),
+        args.fasta,
+        str(normalized_fasta)
+    ])
+
+    args.fasta = str(normalized_fasta)
 
     #
-    # GeneMark workflow
+    # GeneMarkS workflow
     #
 
     if args.mode == "genemark":
