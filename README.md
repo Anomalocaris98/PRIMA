@@ -138,9 +138,9 @@ BLAST+ executables must be installed and available in your `$PATH`.
 
 #### Custom mitochondrial protein database
 
-ATTENTION PRIMA is not shipped with any database.PRIMA assigns putative gene names to GeneMarkS predictions by searching a user-defined protein database with BLASTP.
+ATTENTION, PRIMA is not shipped with any database. PRIMA assigns putative gene names to GeneMarkS predictions by searching a user-defined protein database with BLASTP.
 
-The database can be fully customized according to the user's taxonomic group or research interests. In the example directory a the BLAST database was build using all manually annotated mitogenomes of the ciliate of the genus Paramecium from https://paramecium.i2bc.paris-saclay.fr/ and the assembled mitogenome FASTA file retrieved from https://ncbi.nlm.nih.gov/nucleotide/NC001324 
+The database can be fully customized according to the user's taxonomic group or research interests. In the example directory, the BLAST database was build using all manually annotated mitogenomes of the ciliate of the genus Paramecium from https://paramecium.i2bc.paris-saclay.fr/ and the assembled mitogenome FASTA file retrieved from https://ncbi.nlm.nih.gov/nucleotide/NC001324 
 
 Create the BLAST database using:
 
@@ -206,7 +206,6 @@ python3 mitoannotate.py genemark \
     --db mito_database
 ```
 
----
 
 ## MFannot Workflow
 
@@ -215,7 +214,7 @@ python3 mitoannotate.py mfannot \
     --prefix SAMPLE
 ```
 
----
+
 
 ## Full Workflow
 
@@ -295,6 +294,6 @@ MIT License
 
 ## Contact
 
-This is version 1 of the pipeline, so erros and bugs are expected. If you want to use this simple tool kindly cite the GitHub repository. Any other enquire is warmly welcome at andrea.lenti02@gmail.com
+This is version 1 of the pipeline, so erros and bugs are expected. If you want to use this simple tool, kindly cite the GitHub repository. Any other enquire is warmly welcome at andrea.lenti02@gmail.com
 
 ---
