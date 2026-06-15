@@ -9,7 +9,7 @@ PRIMA integrates:
 * MFannot RNA annotations and protein-coding gene predictions
 * GenBank file generation for downstream visualization with OGDRAW
 
----
+
 ## Requirements
 
 PRIMA was written in Python 3.13 and requires ```biopython and bcbio-gff``` installed
@@ -50,7 +50,7 @@ git clone https://github.com/Anomalocaris98/PRIMA.git
 
 or download the repository as a ZIP archive from GitHub and extract it.
 
----
+
 ## Workflow Overview
 
 ![PRIMA workflow](docs/mito_annotation_pipeline.png)
@@ -72,7 +72,9 @@ Submit the sequence to:
 
 ### 2. Create a working directory
 
-*** ATTENTION *** Place all files associated with a single mitochondrial genome in the same directory using a common prefix.
+**ATTENTION!** 
+
+Place all files associated with a single mitochondrial genome in the same directory using a common prefix.
 
 Example:
 
@@ -118,7 +120,7 @@ python3 prima.py full \
     --prefix SAMPLE \
     --db mito_database
 ```
-
+```text
 Combines GeneMarkS and MFannot annotations.
 
 Workflow:
@@ -130,6 +132,7 @@ MFannot RNA annotation
 Merged annotation
             ↓
 GenBank output
+```
 
 Produces a complete GenBank (manually curate the .gb file after creation!):
 
@@ -145,7 +148,7 @@ python3 prima.py genemark \
     --prefix SAMPLE \
     --db mito_database
 ```
-
+```text
 Uses only GeneMarkS predictions.
 
 Workflow:
@@ -157,7 +160,7 @@ BLASTP annotation
 Gene naming
         ↓
 GenBank output
-
+```
 Produces a GenBank file containing only protein-coding genes.
 
 ### MFannot mode
@@ -168,7 +171,7 @@ python3 mitoannotate.py mfannot \
 ```
 
 Uses only MFannot predictions.
-
+```text
 Workflow:
 
 MFannot annotations
@@ -176,7 +179,7 @@ MFannot annotations
 RNA extraction
         ↓
 GenBank output
-
+```
 ---
 
 ## Output
@@ -199,12 +202,11 @@ PREFIX_blastp_mito_hits.tsv
 
 The final `PREFIX.gb` file can be uploaded directly to OGDRAW https://chlorobox.mpimp-golm.mpg.de/OGDraw.html for graphical visualization.
 
----
+
 ## Test dataset
 
 If you are willing to try PRIMA run the script inside the /example directory 
 
----
 
 ## Repository Structure
 
@@ -232,7 +234,7 @@ PRIMA/
 └── README.md
 ```
 
----
+
 
 ## License
 
