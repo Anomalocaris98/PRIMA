@@ -33,20 +33,15 @@ makeblastdb \
     -out mito_database
 ```
 
-and provide the resulting database prefix through:
-
-```bash
---db mito_database
-```
-
 The quality and specificity of the final annotation depend on the composition of this database.
 
 ## Installation
 
 Clone the repository:
 
+```bash
 git clone https://github.com/Anomalocaris98/PRIMA.git
-
+```
 
 or download the repository as a ZIP archive from GitHub and extract it.
 
@@ -136,10 +131,10 @@ GenBank output
 
 Produces a complete GenBank (manually curate the .gb file after creation!):
 
--Protein-coding genes
--tRNAs
--rRNAs
--ORFs
+- Protein-coding genes
+- tRNAs
+- rRNAs
+- ORFs
 
 ### GeneMark mode
 
@@ -176,11 +171,12 @@ Workflow:
 
 MFannot annotations
         ↓
-RNA extraction
+rRNA and tRNA extraction
         ↓
 GenBank output
 ```
----
+Produces a GenBank file containing protein-coding genes ad rRNAs and tRNAs
+
 
 ## Output
 
@@ -240,11 +236,9 @@ PRIMA/
 
 MIT License
 
----
 
 ## Contact
 
 This is version 1 of the pipeline, so erros and bugs are expected. If you want to use this simple tool kindly cite the GitHub repository.
 
----
 
